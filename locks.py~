@@ -11,11 +11,8 @@ class Num():
         temp += 1
         self.counter = temp
         
-lock = threading.Lock()
 def worker(num):
-    lock.acquire()
     num.increment()
-    lock.release()
     return
 
 threads = []
